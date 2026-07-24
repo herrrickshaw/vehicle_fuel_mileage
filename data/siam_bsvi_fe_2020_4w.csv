@@ -1,0 +1,304 @@
+sno,manufacturer,model_variant,kerb_weight_kg,engine_cc,emission_stage,fuel_type,declared_fe,declared_co2_gkm
+1,Renault India,Renault KWID 0.8L MT,737,799,BS-VI,Gasoline,20.71,114.5
+2,Maruti Suzuki India Limited,"S-Presso [Std, LXI]",740,998,BS-VI,Gasoline,21.4,110.81
+3,Nissan Motor India,DATSUN redi GO 0.8L MT,740,799,BS-VI,Gasoline,20.71,114.5
+4,Renault India,Renault KWID 1L MT,751,999,BS-VI,Gasoline,21.7,109.3
+5,Renault India,Renault KWID 1L AMT,756,999,BS-VI,Gasoline,22.0,107.8
+6,Maruti Suzuki India Limited,TOUR H1,757,796,BS-VI,Gasoline,22.05,107.54
+7,Maruti Suzuki India Limited,Alto,762,796,BS-VI,Gasoline,22.05,107.54
+8,Maruti Suzuki India Limited,"S-Presso [VXI, VXI+]",763,998,BS-VI,Gasoline,21.7,109.28
+9,Maruti Suzuki India Limited,S-Presso AGS,767,998,BS-VI,Gasoline,21.7,109.28
+10,Maruti Suzuki India Limited,TOUR H2,815,998,BS-VI,Gasoline,21.62,109.63
+11,Maruti Suzuki India Limited,WagonR 1.0,820,998,BS-VI,Gasoline,21.79,108.78
+12,Maruti Suzuki India Limited,WagonR 1.0 AGS,825,998,BS-VI,Gasoline,21.79,108.78
+13,Maruti Suzuki India Limited,WagonR 1.2,835,1197,BS-VI,Gasoline,20.52,115.51
+14,Maruti Suzuki India Limited,Celerio,840,998,BS-VI,Gasoline,21.62,109.63
+15,Maruti Suzuki India Limited,Celerio AGS,840,998,BS-VI,Gasoline,21.62,109.63
+16,Maruti Suzuki India Limited,WagonR 1.2 AGS,845,1197,BS-VI,Gasoline,20.52,115.51
+17,Maruti Suzuki India Limited,Alto,850,796,BS-VI,CNG,31.59,86.8
+18,Maruti Suzuki India Limited,Celerio X,850,998,BS-VI,Gasoline,21.62,109.63
+19,Maruti Suzuki India Limited,Celerio X AGS,850,998,BS-VI,Gasoline,21.62,109.63
+20,Maruti Suzuki India Limited,S-Presso,854,998,BS-VI,CNG,31.19,87.91
+21,Maruti Suzuki India Limited,Ignis,855,1197,BS-VI,Gasoline,20.89,113.52
+22,Maruti Suzuki India Limited,Ignis AGS,865,1197,BS-VI,Gasoline,20.89,113.52
+23,Maruti Suzuki India Limited,Swift,880,1197,BS-VI,Gasoline,21.21,111.79
+24,Maruti Suzuki India Limited,Swift AGS,885,1197,BS-VI,Gasoline,21.21,111.79
+25,Maruti Suzuki India Limited,Dzire,890,1197,BS-VI,Gasoline,21.21,111.79
+26,Maruti Suzuki India Limited,Baleno,890,1197,BS-VI,Gasoline,21.01,112.88
+27,Nissan Motor India,DATSUN GO MT,891,1198,BS-VI,Gasoline,19.02,124.68
+28,Maruti Suzuki India Limited,Dzire AGS,895,1197,BS-VI,Gasoline,21.21,111.79
+29,Hyundai Motor India,Santro 1.1MT Era Executive & variants,910,1086,BS-VI,Gasoline,20.0,118.57
+30,Maruti Suzuki India Limited,WagonR 1.0,910,998,BS-VI,CNG,32.52,84.3
+31,Maruti Suzuki India Limited,New Dzire,910,1197,BS-VI,Gasoline,23.26,101.93
+32,Maruti Suzuki India Limited,Baleno Smart Hybrid,910,1197,BS-VI,Gasoline,23.87,99.34
+33,Hyundai Motor India,Santro 1.1AMT Era Executive & variants,911,1086,BS-VI,Gasoline,20.0,118.57
+34,Nissan Motor India,DATSUN GO CVT,913,1198,BS-VI,Gasoline,19.59,121.05
+35,Maruti Suzuki India Limited,New Dzire AGS,915,1197,BS-VI,Gasoline,24.12,98.31
+36,Hyundai Motor India,Grand i10 NIOS 1.2MT Kappa Era & Magna,921,1197,BS-VI,Gasoline,20.699,114.56
+37,Honda Cars India Limited,AMAZE 1.2 E MT (I-VTEC) & Its Variants,924,1199,BS-VI,Gasoline,18.6,127.49
+38,Hyundai Motor India,Grand i10 NIOS 1.2 AMT Kappa Era & Magna,925,1197,BS-VI,Gasoline,20.5,115.68
+39,Nissan Motor India,DATSUN GO PLUS MT,927,1198,BS-VI,Gasoline,19.02,124.68
+40,Renault India,Renault TRIBER 1L MT RXE/RXL,927,999,BS-VI,Gasoline,19.0,124.81
+41,Maruti Suzuki India Limited,Baleno CVT,935,1197,BS-VI,Gasoline,19.56,121.25
+42,Maruti Suzuki India Limited,Eeco,940,1196,BS-VI,Gasoline,16.11,147.18
+43,Maruti Suzuki India Limited,Tour V,940,1196,BS-VI,Gasoline,16.11,147.18
+44,Maruti Suzuki India Limited,Tour S,945,1197,BS-VI,Gasoline,19.95,118.83
+45,Honda Cars India Limited,AMAZE 1.2 S CVT (I-VTEC) & Its Variants,947,1199,BS-VI,Gasoline,18.3,129.58
+46,Hyundai Motor India,"Grand i10 NIOS 1.2MT Kappa Sportz, Sportz Dual tone, Asta",950,1197,BS-VI,Gasoline,20.3,116.81
+47,Nissan Motor India,DATSUN GO PLUS CVT,951,1198,BS-VI,Gasoline,18.57,127.7
+48,Hyundai Motor India,Grand i10 NIOS 1.2 AMT Kappa Sportz & Asta,954,1197,BS-VI,Gasoline,20.1,117.98
+49,Hyundai Motor India,Xcent VTVT Prime T+,956,1197,BS-VI,Gasoline,19.033,124.6
+50,Renault India,Renault TRIBER 1L MT RXT/RXZ,957,999,BS-VI,Gasoline,18.4,128.88
+51,Hyundai Motor India,Grand i10 Magna 1.2 & Variants,960,1197,BS-VI,Gasoline,18.935,125.24
+52,Renault India,Renault TRIBER 1L AMT,961,999,BS-VI,Gasoline,18.3,129.6
+53,Hyundai Motor India,AURA 1.2MT Kappa E & Variants,978,1197,BS-VI,Gasoline,20.504,115.66
+54,Hyundai Motor India,AURA 1.2AMT Kappa E & Variants,982,1197,BS-VI,Gasoline,20.3,116.81
+55,TATA Motors Limited,Tiago,982,1199,BS-VI,Gasoline,20.268,117.0
+56,Hyundai Motor India,Grand i10 NIOS 1.0Turbo MT Era & Variants,983,998,BS-VI,Gasoline,20.3,116.82
+57,TATA Motors Limited,Tiago AMT,991,1199,BS-VI,Gasoline,19.279,123.0
+58,Hyundai Motor India,AURA 1.0 Turbo GDI MT S & Variants,996,998,BS-VI,Gasoline,20.5,115.68
+59,Hyundai Motor India,Santro 1.1MT CNG Magna & Variants,1000,1086,BS-VI,CNG,29.103,94.22
+60,Skoda Auto Volkswagen India Pvt. Ltd.,Polo 1.0L MPI 56kW MT BSVI- Trendline,1015,999,BS-VI,Gasoline,17.746,133.63
+61,TATA Motors Limited,Tigor,1024,1199,BS-VI,Gasoline,19.927,119.0
+62,Hyundai Motor India,Grand i10 NIOS 1.2MT CRDi Era & Variants,1028,1186,BS-VI,Diesel,25.497,103.86
+63,Hyundai Motor India,AURA 1.2MT CRDi E & S,1030,1186,BS-VI,Diesel,25.348,104.47
+64,Skoda Auto Volkswagen India Pvt. Ltd.,Polo 1.0L MPI 56kW MT BSVI- Comfortline,1030,999,BS-VI,Gasoline,17.746,133.63
+65,Skoda Auto Volkswagen India Pvt. Ltd.,Polo 1.0L MPI 56kW MT BSVI- Comfortline Plus,1030,999,BS-VI,Gasoline,17.746,133.63
+66,Hyundai Motor India,Grand i10 NIOS 1.2MT CNG Magna & Variants,1033,1197,BS-VI,CNG,28.097,97.58
+67,TATA Motors Limited,Tigor AMT,1033,1199,BS-VI,Gasoline,19.279,123.0
+68,Skoda Auto Volkswagen India Pvt. Ltd.,Polo 1.0L MPI 56kW MT BSVI- Highline,1034,999,BS-VI,Gasoline,17.746,133.63
+69,Skoda Auto Volkswagen India Pvt. Ltd.,Polo 1.0L MPI 56kW MT BSVI- Highline Plus,1034,999,BS-VI,Gasoline,17.746,133.63
+70,Hyundai Motor India,i20 Magna + VTVT,1035,1197,BS-VI,Gasoline,18.008,131.7
+71,Hyundai Motor India,Grand i10 NIOS 1.2AMT CRDi Era & Variants,1036,1186,BS-VI,Diesel,25.1,101.09
+72,TATA Motors Limited,Altroz,1036,1199,BS-VI,Gasoline,19.761,120.0
+73,Hyundai Motor India,AURA 1.2AMT CRDi E & S,1038,1186,BS-VI,Diesel,25.4,104.26
+74,Honda Cars India Limited,AMAZE 1.5 E MT (i-DTEC) & Its Variants,1042,1498,BS-VI,Diesel,24.7,107.22
+75,Ford India,Figo / Aspire MT,1044,1194,BS-VI,Gasoline,18.47,128.4
+76,Ford India,Freestyle MT,1045,1194,BS-VI,Gasoline,18.53,127.99
+77,Maruti Suzuki India Limited,Tour S,1045,1197,BS-VI,CNG,26.55,103.27
+78,Hyundai Motor India,AURA 1.2MT CNG S,1050,1197,BS-VI,CNG,28.401,96.55
+79,Maruti Suzuki India Limited,Eeco,1050,1196,BS-VI,CNG,20.88,131.28
+80,Maruti Suzuki India Limited,Tour V,1050,1196,BS-VI,CNG,20.88,131.28
+81,Hyundai Motor India,AURA 1.2MT CRDi SX & SX(O),1056,1186,BS-VI,Diesel,24.9,106.36
+82,Skoda Auto Volkswagen India Pvt. Ltd.,Polo TSI MT BSVI- Trendline,1056,999,BS-VI,Gasoline,18.242,130.0
+83,Honda Cars India Limited,AMAZE 1.5 S CVT (i-DTEC) & Its Variants,1059,1498,BS-VI,Diesel,21.0,126.11
+84,Maruti Suzuki India Limited,Ciaz Smart Hybrid,1060,1462,BS-VI,Gasoline,20.65,114.81
+85,Hyundai Motor India,"AURA 1.2AMT CRDi SX, SX + & SX(O)",1064,1186,BS-VI,Diesel,24.9,106.36
+86,Maruti Suzuki India Limited,Ciaz Smart Hybrid AT,1065,1462,BS-VI,Gasoline,20.03,118.34
+87,Skoda Auto Volkswagen India Pvt. Ltd.,Polo TSI MT BSVI- Comfortline,1068,999,BS-VI,Gasoline,18.242,130.0
+88,Skoda Auto Volkswagen India Pvt. Ltd.,Polo TSI MT BSVI- Highline,1072,999,BS-VI,Gasoline,18.242,130.0
+89,Skoda Auto Volkswagen India Pvt. Ltd.,Polo TSI MT BSVI- Highline Plus,1072,999,BS-VI,Gasoline,18.242,130.0
+90,Hyundai Motor India,VENUE 1.2 Kappa MT E & Variants,1081,1197,BS-VI,Gasoline,17.268,137.34
+91,Ford India,Freestyle MT,1085,1499,BS-VI,Diesel,23.82,111.18
+92,Hyundai Motor India,i20 Sportz + VTVT & variants,1087,1197,BS-VI,Gasoline,17.5,135.5
+93,Ford India,Figo / Aspire MT,1091,1499,BS-VI,Diesel,24.4,108.53
+94,Honda Cars India Limited,CITY 1.5 SV MT (i-VTEC) & Its Variants,1091,1497,BS-VI,Gasoline,17.4,136.28
+95,Hyundai Motor India,VERNA 1.5 MPI MT S,1100,1497,BS-VI,Gasoline,17.699,133.97
+96,Mahindra & Mahindra,"KUV100 NXT (K2+, k4+, Trip)",1105,1198,BS-VI,Gasoline,17.5,135.51
+97,Honda Cars India Limited,WR-V 1.2 SV MT (i-VTEC) & Its Variants,1106,1199,BS-VI,Gasoline,16.5,143.72
+98,Honda Cars India Limited,CITY 1.5 SV CVT (i-VTEC) & Its Variants,1110,1497,BS-VI,Gasoline,17.07,138.92
+99,Skoda Auto Volkswagen India Pvt. Ltd.,"Rapid Active – MT (81 kW, TSI)",1112,999,BS-VI,Gasoline,18.972,125.0
+100,Toyota Kirloskar Motor,TOYOTA YARIS 1.5J,1115,1496,BS-VI,Gasoline,17.2,138.0
+101,Toyota Kirloskar Motor,TOYOTA YARIS 1.5G,1115,1496,BS-VI,Gasoline,17.2,138.0
+102,Toyota Kirloskar Motor,TOYOTA YARIS 1.5V,1115,1496,BS-VI,Gasoline,17.2,138.0
+103,Toyota Kirloskar Motor,TOYOTA YARIS 1.5VX,1115,1496,BS-VI,Gasoline,17.2,138.0
+104,Skoda Auto Volkswagen India Pvt. Ltd.,Vento TSI MT BSVI- Trendline,1122,999,BS-VI,Gasoline,17.696,134.0
+105,Mahindra & Mahindra,"KUV100 NXT (K6+, K8)",1125,1198,BS-VI,Gasoline,17.8,133.22
+106,Maruti Suzuki India Limited,Vitara Brezza,1130,1462,BS-VI,Gasoline,17.03,139.17
+107,Skoda Auto Volkswagen India Pvt. Ltd.,"Rapid Ambition – MT (81 kW, TSI)",1130,999,BS-VI,Gasoline,18.972,125.0
+108,Toyota Kirloskar Motor,TOYOTA YARIS 1.5J (CVT),1130,1496,BS-VI,Gasoline,18.1,131.0
+109,Toyota Kirloskar Motor,TOYOTA YARIS 1.5G (CVT),1130,1496,BS-VI,Gasoline,18.1,131.0
+110,Toyota Kirloskar Motor,TOYOTA YARIS 1.5V (CVT),1130,1496,BS-VI,Gasoline,18.1,131.0
+111,Toyota Kirloskar Motor,TOYOTA YARIS 1.5VX (CVT),1130,1496,BS-VI,Gasoline,18.1,131.0
+112,Skoda Auto Volkswagen India Pvt. Ltd.,Vento TSI MT BSVI- Comfortline,1134,999,BS-VI,Gasoline,17.696,134.0
+113,Skoda Auto Volkswagen India Pvt. Ltd.,"Rapid Style – MT (81 kW, TSI)",1138,999,BS-VI,Gasoline,18.972,125.0
+114,Skoda Auto Volkswagen India Pvt. Ltd.,Vento TSI MT BSVI- Highline,1138,999,BS-VI,Gasoline,17.696,134.0
+115,Skoda Auto Volkswagen India Pvt. Ltd.,Vento TSI MT BSVI- Highline Plus,1138,999,BS-VI,Gasoline,17.696,134.0
+116,Maruti Suzuki India Limited,TOUR M,1145,1462,BS-VI,Gasoline,18.04,131.4
+117,Maruti Suzuki India Limited,Vitara Brezza Smart Hybrid AT,1150,1462,BS-VI,Gasoline,18.76,126.39
+118,TATA Motors Limited,Altroz,1150,1497,BS-VI,Diesel,23.029,115.0
+119,Hyundai Motor India,"VERNA 1.5 MPI MT S+, SX & SX(O)",1151,1497,BS-VI,Gasoline,17.4,133.28
+120,Hyundai Motor India,VENUE 1.0 Turbo GDI MT S & variants,1154,998,BS-VI,Gasoline,18.07,131.23
+121,Maruti Suzuki India Limited,Ertiga Smart Hybrid,1160,1462,BS-VI,Gasoline,19.01,124.71
+122,Maruti Suzuki India Limited,Ertiga Smart Hybrid AT,1170,1462,BS-VI,Gasoline,17.99,131.77
+123,Hyundai Motor India,VENUE 1.0 Turbo GDI DCT S & Variants,1171,998,BS-VI,Gasoline,17.992,131.8
+124,Hyundai Motor India,"VENUE 1.5 CRDi MT E & Variants (15"")",1177,1493,BS-VI,Diesel,23.288,113.73
+125,Maruti Suzuki India Limited,XL6 Smart Hybrid,1180,1462,BS-VI,Gasoline,19.01,124.71
+126,Hyundai Motor India,VERNA1.5 MPI IVT SX & SX(O),1182,1497,BS-VI,Gasoline,18.45,128.53
+127,Maruti Suzuki India Limited,XL6 Smart Hybrid,1190,1462,BS-VI,Gasoline,17.99,131.77
+128,Hyundai Motor India,VERNA 1.0 Turbo GDI DCT SX(O),1195,998,BS-VI,Gasoline,19.201,123.51
+129,Kia Motors,Kia Seltos Smartstream G1.5 6MT THE & Variants,1221,1497,BS-VI,Gasoline,16.501,143.72
+130,Hyundai Motor India,Creta 1.5 MPi MT EX & Variants,1230,1497,BS-VI,Gasoline,16.758,141.49
+131,Hyundai Motor India,"VENUE 1.5 CRDi MT E & Variants (16"")",1233,1493,BS-VI,Diesel,22.696,116.68
+132,Honda Cars India Limited,WR-V 1.5 SV MT (i-DTEC) & Its Variants,1234,1498,BS-VI,Diesel,23.7,111.74
+133,Maruti Suzuki India Limited,Ertiga,1235,1462,BS-VI,CNG,26.08,105.11
+134,Maruti Suzuki India Limited,TOUR M,1235,1462,BS-VI,CNG,26.08,105.11
+135,TATA Motors Limited,Nexon,1240,1199,BS-VI,Gasoline,17.566,135.0
+136,Hyundai Motor India,VERNA 1.5 MPI MT S & Variants,1245,1493,BS-VI,Diesel,25.0,105.93
+137,Ford India,Ecosport MT,1246,1496,BS-VI,Gasoline,15.88,149.32
+138,Kia Motors,Kia Seltos Smartstream G1.5 IVT HTX,1246,1497,BS-VI,Gasoline,16.801,141.15
+139,Renault India,Renault DUSTER 1.5L MT,1249,1498,BS-VI,Gasoline,14.26,166.3
+140,TATA Motors Limited,Nexon AMT,1255,1199,BS-VI,Gasoline,16.354,145.0
+141,Hyundai Motor India,VERNA 1.5 CRDi AT SX & Variants,1260,1493,BS-VI,Diesel,21.299,124.33
+142,BMW India,Mini Cooper S (3-door Hatch) with Automatic Transmission,1265,1998,BS-VI,Gasoline,17.31,137.0
+143,Honda Cars India Limited,CIVIC 1.8 V CVT (i-VTEC),1268,1799,BS-VI,Gasoline,16.5,143.75
+144,Hyundai Motor India,Creta 1.5 MPi IVT SX & Variants,1282,1497,BS-VI,Gasoline,16.852,140.71
+145,BMW India,Mini Cooper S JCW (3-door Hatch) with Automatic Transmission,1285,1998,BS-VI,Gasoline,16.47,144.0
+146,Kia Motors,Kia Seltos Smartstream G1.4T-GDI 6MT GTK & Variants,1289,1353,BS-VI,Gasoline,16.1,147.29
+147,Hyundai Motor India,Elantra VTVT S &Variants,1292,1999,BS-VI,Gasoline,14.6,162.42
+148,Ford India,Ecosport AT,1300,1496,BS-VI,Gasoline,14.71,161.18
+149,Honda Cars India Limited,CIVIC 1.8 VX CVT (i-VTEC) & Its Variants,1300,1799,BS-VI,Gasoline,16.45,144.15
+150,Ford India,Ecosport MT,1302,1499,BS-VI,Diesel,21.74,121.82
+151,TATA Motors Limited,Nexon,1315,1497,BS-VI,Diesel,22.443,118.0
+152,TATA Motors Limited,Nexon AMT,1315,1497,BS-VI,Diesel,22.443,118.0
+153,Kia Motors,Kia Seltos Smartstream G1.4T-GDI 7DCT GTX & Variants,1321,1353,BS-VI,Gasoline,16.498,143.72
+154,Hyundai Motor India,Creta 1.4 Turbo GDi DCT SX & Variants,1323,1353,BS-VI,Diesel,16.761,141.49
+155,Hyundai Motor India,Elantra VTVT Auto SX & Variants,1330,1999,BS-VI,Gasoline,14.4,162.42
+156,Hyundai Motor India,Creta 1.5 CRDi AT SX,1342,1493,BS-VI,Diesel,18.46,143.46
+157,Kia Motors,Kia Seltos D1.5 CRDI VGT 6MT THE & Variants,1343,1493,BS-VI,Diesel,20.999,126.11
+158,Hyundai Motor India,Creta 1.5 CRDi MT E & Variants,1344,1493,BS-VI,Diesel,21.353,124.01
+159,BMW India,Mini Cooper S Convertiable with Automatic Transmission,1350,1998,BS-VI,Gasoline,16.7,142.0
+160,Mahindra & Mahindra,XUV3OO MT - Gasoline TCMPFI,1352,1197,BS-VI,Gasoline,16.82,141.0
+161,Mahindra & Mahindra,XUV3OO MT - Gasoline TGDI,1352,1197,BS-VI,Gasoline,17.5,135.5
+162,Nissan Motor India,Nissan KICKS 1.3L MT,1352,1330,BS-VI,Gasoline,15.8,150.09
+163,Hyundai Motor India,Elantra CRDI S & Variants,1356,1493,BS-VI,Diesel,22.7,116.67
+164,Honda Cars India Limited,CIVIC 1.6 VX MT (i-DTEC) & Its Variants,1358,1597,BS-VI,Diesel,23.9,110.81
+165,Kia Motors,Kia Seltos D1.5 CRDI VGT 6AT HTK Plus & Variants,1361,1493,BS-VI,Diesel,18.001,147.13
+166,Hyundai Motor India,Elantra CRDI Auto SX &Variants,1395,1493,BS-VI,Diesel,18.2,145.51
+167,Mahindra & Mahindra,XUV3OO MT - Diesel,1419,1497,BS-VI,Diesel,20.1,131.76
+168,Mahindra & Mahindra,XUV3OO - Diesel AS,1431,1497,BS-VI,Diesel,19.7,134.43
+169,FCA India,Jeep Compass Sport 1.4Mair BSVI,1457,1396,BS-VI,Gasoline,15.0,158.52
+170,FCA India,Jeep Compass Longitude 1.4Mair DDCT BSVI,1475,1396,BS-VI,Gasoline,14.5,164.11
+171,BMW India,BMW Z4 sDrive20i with Automatic Transmission,1480,1998,BS-VI,Gasoline,14.37,165.0
+172,BMW India,Mini Clubman Cooper S with Automatic Transmission,1509,1998,BS-VI,Gasoline,13.79,172.0
+173,FCA India,Jeep Compass Limited Plus 1.4Mair DDCT BSVI,1514,1396,BS-VI,Gasoline,14.1,168.77
+174,Honda Cars India Limited,CR-V 2.0 CVT (i-VTEC),1545,1997,BS-VI,Gasoline,14.38,164.91
+175,Skoda Auto Volkswagen India Pvt. Ltd.,"Superb Sportline (140 kW, TSI)",1562,2098,BS-VI,Gasoline,15.103,157.0
+176,Hyundai Motor India,TUCSON VTVT AUTO GL (O) & Variants,1564,1999,BS-VI,Gasoline,13.08,181.29
+177,Skoda Auto Volkswagen India Pvt. Ltd.,"Superb Laurin & Klement (140 kW, TSI)",1579,2098,BS-VI,Gasoline,15.103,157.0
+178,BMW India,BMW 320d with Automatic Transmission,1580,1995,BS-VI,Diesel,20.37,130.0
+179,BMW India,Mini Cooper S Countryman,1583,1998,BS-VI,Gasoline,14.35,165.3
+180,Hyundai Motor India,Kona Electric Premium & Variants,1585,,BS-VI,Electric,10.309,23.64
+181,Mercedes-Benz India,C 200,1600,1991,BS-VI,Gasoline,13.173,180.0
+182,BMW India,BMW 330i with Automatic Tranmission,1606,1998,BS-VI,Gasoline,16.13,147.0
+183,BMW India,BMW Z4 M40i with Automatic Transmission,1610,2998,BS-VI,Gasoline,12.82,185.0
+184,BMW India,BMW X1 sDrive20i with Automatic Transmsision,1611,1998,BS-VI,Gasoline,14.82,160.0
+185,BMW India,BMW X1 sDrive20d with Automatic Transmission,1612,1995,BS-VI,Diesel,19.62,135.0
+186,MG Motor India Pvt. Ltd.,HECTOR Gasoline 1.5 TCIC MT Style BSVI,1613,1451,BS-VI,Gasoline,13.3,174.79
+187,MG Motor India Pvt. Ltd.,HECTOR Gasoline 1.5 TCIC MT Super BSVI,1613,1451,BS-VI,Gasoline,13.3,174.79
+188,MG Motor India Pvt. Ltd.,HECTOR Gasoline 1.5 TCIC MT Smart BSVI,1613,1451,BS-VI,Gasoline,13.3,174.79
+189,MG Motor India Pvt. Ltd.,HECTOR Gasoline 1.5 TCIC MT Sharp BSVI,1613,1451,BS-VI,Gasoline,13.3,174.79
+190,BMW India,BMW M2 with Automatic Tranmission,1616,2979,BS-VI,Gasoline,10.63,223.0
+191,Mahindra & Mahindra,BOLERO CLASSIC,1620,1493,BS-VI,Diesel,16.7,158.56
+192,Mahindra & Mahindra,TUV300,1622,1493,BS-VI,Diesel,17.29,153.18
+193,FCA India,Jeep Compass Sport 2.0D BSVI,1633,1956,BS-VI,Diesel,17.3,152.81
+194,MG Motor India Pvt. Ltd.,HECTOR Gasoline 1.5 TCIC MT Hybrid Super BSVI,1637,1451,BS-VI,Gasoline,14.286,168.0
+195,MG Motor India Pvt. Ltd.,HECTOR Gasoline 1.5 TCIC MT Hybrid Smart BSVI,1637,1451,BS-VI,Gasoline,14.286,168.0
+196,MG Motor India Pvt. Ltd.,HECTOR Gasoline 1.5 TCIC MT Hybrid Sharp BSVI,1637,1451,BS-VI,Gasoline,14.286,168.0
+197,MG Motor India Pvt. Ltd.,HECTOR Gasoline 1.5 TCIC DCT Smart BSVI,1649,1451,BS-VI,Gasoline,12.315,192.21
+198,MG Motor India Pvt. Ltd.,HECTOR Gasoline 1.5 TCIC DCT Sharp BSVI,1649,1451,BS-VI,Gasoline,12.315,192.21
+199,MG Motor India Pvt. Ltd.,HECTOR Plus 6 seater Gasoline 1.5 TCIC MT Hybrid Sharp BSVI,1649,1451,BS-VI,Gasoline,14.025,168.0
+200,MG Motor India Pvt. Ltd.,HECTOR Plus 6 seater Gasoline 1.5 TCIC DCT Smart BSVI,1661,1451,BS-VI,Gasoline,11.67,202.57
+201,MG Motor India Pvt. Ltd.,HECTOR Plus 6 seater Gasoline 1.5 TCIC DCT Sharp BSVI,1661,1451,BS-VI,Gasoline,11.67,202.57
+202,Toyota Kirloskar Motor,TOYOTA CAMRY Hybrid,1665,2487,BS-VI,Gasoline Hybrid,22.8,104.0
+203,BMW India,BMW 530i with Automatic Transmission,1670,1998,BS-VI,Gasoline,15.01,158.0
+204,Mercedes-Benz India,C 220 d,1677,1950,BS-VI,Diesel,18.782,141.0
+205,FCA India,Jeep Compass Limited 4x4 2.0D BSVI,1700,1956,BS-VI,Diesel,16.6,159.9
+206,Hyundai Motor India,TUCSON CRDi AUTO GL(O) & Variants,1700,1995,BS-VI,Diesel,16.98,156.02
+207,Mahindra & Mahindra,TUV300 PLUS,1705,2184,BS-VI,Diesel,15.9,166.52
+208,TATA Motors Limited,Harrier,1710,1956,BS-VI,Diesel,16.348,162.0
+209,Mahindra & Mahindra,MAHINDRA MARAZZO,1712,1497,BS-VI,Diesel,17.31,153.0
+210,Mercedes-Benz India,C 300 d,1715,1950,BS-VI,Diesel,17.774,149.0
+211,TATA Motors Limited,Harrier XMA,1719,1956,BS-VI,Diesel,14.632,181.0
+212,MG Motor India Pvt. Ltd.,HECTOR Diesel 2.0 MT Style BSVI,1727,1956,BS-VI,Diesel,16.174,170.0
+213,MG Motor India Pvt. Ltd.,HECTOR Diesel 2.0 MT Super BSVI,1727,1956,BS-VI,Diesel,16.174,170.0
+214,MG Motor India Pvt. Ltd.,HECTOR Diesel 2.0 MT Smart BSVI,1727,1956,BS-VI,Diesel,16.174,170.0
+215,MG Motor India Pvt. Ltd.,HECTOR Diesel 2.0 MT Sharp BSVI,1727,1956,BS-VI,Diesel,16.174,170.0
+216,MG Motor India Pvt. Ltd.,HECTOR Plus 6 seater Diesel 2.0 MT Super BSVI,1739,1956,BS-VI,Diesel,16.562,170.0
+217,MG Motor India Pvt. Ltd.,HECTOR Plus 6 seater Diesel 2.0 MT Smart BSVI,1739,1956,BS-VI,Diesel,16.562,170.0
+218,MG Motor India Pvt. Ltd.,HECTOR Plus 6 seater Diesel 2.0 MT Sharp BSVI,1739,1956,BS-VI,Diesel,16.562,170.0
+219,FCA India,Jeep Compass Longitude 4X4 2.0D AT BSVI,1740,1956,BS-VI,Diesel,15.3,173.66
+220,Toyota Kirloskar Motor,Lexus ES300H (Hybrid) EXQUISITE,1740,2487,BS-VI,Gasoline Hybrid,22.6,105.0
+221,Toyota Kirloskar Motor,Lexus ES300H (Hybrid) LUXURY,1740,2487,BS-VI,Gasoline Hybrid,22.6,105.0
+222,BMW India,BMW 520d with Automatic Transmission,1743,1995,BS-VI,Diesel,20.37,130.0
+223,Toyota Kirloskar Motor,Innova Crysta 2.7 G,1760,2694,BS-VI,Gasoline,10.6,224.0
+224,Toyota Kirloskar Motor,Innova Crysta 2.7 V,1760,2694,BS-VI,Gasoline,10.6,224.0
+225,Toyota Kirloskar Motor,Innova Touring Sport (Gasoline MT),1760,2694,BS-VI,Gasoline,10.6,224.0
+226,Toyota Kirloskar Motor,Innova Crysta 2.7 G (FLT),1760,2694,BS-VI,Gasoline,10.0,236.0
+227,BMW India,BMW 330i Gran Turismo with Automatic Tranmission,1762,1998,BS-VI,Gasoline,13.95,170.0
+228,Hyundai Motor India,TUCSON CRDi 4WD AUTO GLS,1769,1995,BS-VI,Diesel,15.593,169.83
+229,FCA India,Jeep Compass TRAILHAWK 4x4 2.0D AT BSVI,1770,1956,BS-VI,Diesel,14.9,177.74
+230,Skoda Auto Volkswagen India Pvt. Ltd.,Audi A6 45 TFSI,1780,1984,BS-VI,Gasoline,14.378,164.93
+231,Mercedes-Benz India,E 200,1800,1991,BS-VI,Gasoline,12.48,190.0
+232,Toyota Kirloskar Motor,Innova Crysta 2.7 G,1800,2694,BS-VI,Gasoline,10.5,225.0
+233,Toyota Kirloskar Motor,Innova Crysta 2.7 Z,1800,2694,BS-VI,Gasoline,10.5,225.0
+234,Toyota Kirloskar Motor,Innova Touring Sport (Gasoline AT),1800,2694,BS-VI,Gasoline,10.5,225.0
+235,BMW India,BMW 530d with Automatic Transmission,1835,2993,BS-VI,Diesel,17.42,152.0
+236,BMW India,BMW 630i with Automatic Transmission,1843,1998,BS-VI,Gasoline,13.32,178.0
+237,Mercedes-Benz India,GLC 200,1845,1991,BS-VI,Gasoline,12.819,185.0
+238,BMW India,BMW X4 xDrive30i with Automatic Transmission,1855,1998,BS-VI,Gasoline,12.82,185.0
+239,Mercedes-Benz India,GLC 300 4MATIC Coupe,1858,1991,BS-VI,Gasoline,12.748,186.0
+240,BMW India,BMW 620d with Automatic Transmission,1874,1995,BS-VI,Diesel,18.65,142.0
+241,Mahindra & Mahindra,XUV5OO FWD,1875,2179,BS-VI,Diesel,15.05,176.0
+242,Mahindra & Mahindra,XUV5OO FWD AT,1875,2179,BS-VI,Diesel,13.44,197.0
+243,Mahindra & Mahindra,SCORPIO 2.2 mHawk-140HP MH- 2WD,1875,2179,BS-VI,Diesel,14.44,183.42
+244,Toyota Kirloskar Motor,Innova Crysta 2.4 G,1875,2393,BS-VI,Diesel,14.9,178.0
+245,Mercedes-Benz India,E 220 d,1880,1950,BS-VI,Diesel,17.52,155.0
+246,BMW India,BMW X4 xDrive20d with Automatic Transmission,1892,1995,BS-VI,Diesel,16.55,160.0
+247,Toyota Kirloskar Motor,Innova Crysta,1895,2393,BS-VI,Diesel,15.6,170.0
+248,Toyota Kirloskar Motor,Innova Crysta G,1895,2393,BS-VI,Diesel,15.6,170.0
+249,Toyota Kirloskar Motor,Innova Crysta 2.4 G,1895,2393,BS-VI,Diesel,15.6,170.0
+250,Toyota Kirloskar Motor,Innova Crysta 2.4 V,1895,2393,BS-VI,Diesel,15.6,170.0
+251,Toyota Kirloskar Motor,Innova Crysta 2.4 Z,1895,2393,BS-VI,Diesel,15.6,170.0
+252,Toyota Kirloskar Motor,Innova Touring Sport (Diesel 5MT),1895,2393,BS-VI,Diesel,15.6,170.0
+253,Toyota Kirloskar Motor,Innova Crysta Leadership edition,1895,2393,BS-VI,Diesel,15.6,170.0
+254,Toyota Kirloskar Motor,Innova (FLT),1895,2393,BS-VI,Diesel,15.6,170.0
+255,Toyota Kirloskar Motor,Innova Crysta G (FLT),1895,2393,BS-VI,Diesel,15.6,170.0
+256,Toyota Kirloskar Motor,Innova Crysta 2.4 G (FLT),1895,2393,BS-VI,Diesel,15.6,170.0
+257,Toyota Kirloskar Motor,Innova Crysta 2.4 V (FLT),1895,2393,BS-VI,Diesel,15.6,170.0
+258,Toyota Kirloskar Motor,Toyota Fortuner,1895,2694,BS-VI,Gasoline,10.0,236.0
+259,BMW India,BMW X3 xDrive20d with Automatic Transmission,1896,1995,BS-VI,Diesel,16.55,160.0
+260,BMW India,BMW X3 xDrive30i with Automatic Transmission,1902,1998,BS-VI,Gasoline,13.17,180.0
+261,Toyota Kirloskar Motor,Lexus NX300h EXQUISITE (Hybrid),1905,2494,BS-VI,Gasoline Hybrid,17.2,138.0
+262,Toyota Kirloskar Motor,Lexus NX300h LUXURY (Hybrid),1905,2494,BS-VI,Gasoline Hybrid,17.2,138.0
+263,Toyota Kirloskar Motor,Lexus NX300h FSPORT (Hybrid),1905,2494,BS-VI,Gasoline Hybrid,17.2,138.0
+264,Toyota Kirloskar Motor,Innova Crysta 2.4 V (Diesel 6MT),1915,2393,BS-VI,Diesel,15.3,173.0
+265,Toyota Kirloskar Motor,Innova Touring Sport (Diesel 6MT),1915,2393,BS-VI,Diesel,15.3,173.0
+266,Toyota Kirloskar Motor,Toyota Fortuner,1925,2694,BS-VI,Gasoline,10.3,231.0
+267,Toyota Kirloskar Motor,Innova Crysta 2.4 Z,1930,2393,BS-VI,Diesel,15.9,167.0
+268,Toyota Kirloskar Motor,Innova Touring Sport (Diesel AT),1930,2393,BS-VI,Diesel,15.9,167.0
+269,BMW India,BMW M5 with Automatic Tranmission,1951,4395,BS-VI,Gasoline,9.8,242.0
+270,Mercedes-Benz India,GLC 220 d 4MATIC,1954,1950,BS-VI,Diesel,17.655,150.0
+271,BMW India,BMW M8 with Automatic Transmission,1955,4395,BS-VI,Gasoline,6.59,360.0
+272,Mercedes-Benz India,GLC 300 d 4MATIC Coupe,1960,1950,BS-VI,Diesel,16.347,162.0
+273,BMW India,BMW 840i with Automatic Tranmission,1969,2998,BS-VI,Gasoline,11.29,210.0
+274,BMW India,BMW 740Li with Automatic Transmission,1990,2998,BS-VI,Gasoline,11.86,200.0
+275,Mercedes-Benz India,E 350 d,1990,2925,BS-VI,Diesel,16.55,160.0
+276,BMW India,BMW X4 xDrive30d with Automatic Transmission,1995,2993,BS-VI,Diesel,14.71,180.0
+277,BMW India,BMW X3M with Automatic Tranmission,2010,2993,BS-VI,Gasoline,9.12,260.0
+278,BMW India,BMW 630d with Automatic Transmission,2033,2993,BS-VI,Diesel,17.09,155.0
+279,BMW India,BMW X4M with Automatic Tranmission,2066,2993,BS-VI,Gasoline,9.12,260.0
+280,BMW India,BMW M8 Cabrio with Automatic Transmission,2068,4395,BS-VI,Gasoline,6.59,360.0
+281,BMW India,BMW 730Ld with Automatic Transmission,2085,2993,BS-VI,Diesel,15.13,175.0
+282,Mercedes-Benz India,S 350 d,2150,2925,BS-VI,Diesel,16.051,165.0
+283,Toyota Kirloskar Motor,Toyota Fortuner,2180,2755,BS-VI,Diesel,14.6,182.0
+284,Toyota Kirloskar Motor,Fortuner Sigma 4,2180,2755,BS-VI,Diesel,14.2,186.0
+285,Toyota Kirloskar Motor,Fortuner,2180,2755,BS-VI,Diesel,14.4,184.0
+286,Toyota Kirloskar Motor,Fortuner Sigma 4,2180,2755,BS-VI,Diesel,14.2,187.0
+287,Kia Motors,Kia Carnival D2.2 8AT Premium 7 & Variants,2201,2199,BS-VI,Diesel,13.898,190.56
+288,BMW India,BMW 745Lex with Automatic Transmission,2245,2998,BS-VI,Gasoline Hybrid,39.53,60.0
+289,BMW India,BMW X6 xDrive 40i with Automatic Transmission,2253,2998,BS-VI,Gasoline,10.31,230.0
+290,Mercedes-Benz India,GLE 300 d 4MATIC,2260,1950,BS-VI,Diesel,15.133,175.0
+291,BMW India,BMW M760Li with Automatic Transmission,2275,6592,BS-VI,Gasoline,7.96,298.0
+292,BMW India,BMW X5 xDrive 40i with Automatic Transmission,2286,2998,BS-VI,Gasoline,11.24,211.0
+293,Toyota Kirloskar Motor,TOYOTA VELLFIRE Hybrid,2290,2494,BS-VI,Gasoline Hybrid,16.4,145.0
+294,Mercedes-Benz India,Mercedes Maybach S 560,2295,3982,BS-VI,Gasoline,8.47,280.0
+295,Ford India,Endeavour 4 X 2 AT,2310,1996,BS-VI,Diesel,13.94,190.0
+296,BMW India,BMW X5 xDrive30d with Automatic Transmission,2311,2993,BS-VI,Diesel,13.38,198.0
+297,Mercedes-Benz India,GLE 450 4MATIC,2380,2999,BS-VI,Gasoline,11.029,215.0
+298,Ford India,Endeavour 4 X 4 AT,2410,1996,BS-VI,Diesel,12.43,213.0
+299,BMW India,BMW X5M with Automatic Tranmission,2424,4395,BS-VI,Gasoline,8.29,286.0
+300,BMW India,BMW X7 xDrive 40i with Automatic Transmission,2443,2998,BS-VI,Gasoline,10.54,225.0
+301,BMW India,BMW X7 xDrive30d with Automatic Transmission,2510,2993,BS-VI,Diesel,13.38,198.0
+302,BMW India,BMW X7 M50d with Automatic Transmission,2515,2993,BS-VI,Diesel,12.98,204.0
+303,Toyota Kirloskar Motor,LEXUS LX570,2740,5663,BS-VI,Gasoline,7.1,332.0

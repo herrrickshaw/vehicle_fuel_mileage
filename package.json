@@ -1,0 +1,12 @@
+{
+  "name": "vehicle_fuel_mileage",
+  "version": "1.0.0",
+  "description": "Cost-of-ownership and exchequer analysis of E20 petrol vs diesel vs CNG vs EV in India",
+  "scripts": {
+    "report": "node scripts/build_report.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "docx": "^8.5.0"
+  }
+}
