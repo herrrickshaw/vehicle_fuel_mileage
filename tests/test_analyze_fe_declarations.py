@@ -135,3 +135,13 @@ def test_main_e20_penalty_uses_mean_petrol_fe(run_main):
     text = out_md.read_text()
     assert "17.28" in text
     assert "18.00 kmpl" in text          # reported mean petrol FE
+
+
+def test_base_model_key_pairs_previously_missed_trim_codes():
+    """ZXI / ZXI+ / ZDI / VDI trim codes were not in the old whitelist, so
+    petrol/CNG/diesel twins of the same nameplate failed to pair. They must now
+    all normalise to the same base key as the VXI/LXI variants."""
+    base = afe.base_model_key("Swift VXI")
+    for variant in ["Swift LXI", "Swift ZXI", "Swift ZXI+", "Swift ZDI",
+                    "Swift VDI", "Swift ZXI CNG"]:
+        assert afe.base_model_key(variant) == base == "swift"

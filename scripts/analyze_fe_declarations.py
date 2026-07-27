@@ -67,7 +67,12 @@ def base_model_key(model):
     """Normalise a variant string to a coarse model key so petrol & CNG
     variants of the same nameplate match (drop trim/transmission/fuel tokens)."""
     m = model.lower()
-    m = re.sub(r"\b(cng|smart hybrid|hybrid|ags|amt|cvt|mt|at|ivt|dct|vxi|lxi|std|"
+    # Trim/transmission/fuel tokens dropped so petrol & CNG twins collapse to the
+    # same nameplate. Maruti-style trim codes follow a [VLZS][XD]I(+) pattern
+    # (VXI/LXI/ZXI/SXI petrol, VDI/LDI/ZDI/SDI diesel) — match them generally so
+    # a variant like ZXI isn't missed and its petrol/CNG twin still pairs.
+    m = re.sub(r"\b[vlzs][xd]i\b\+?", " ", m)
+    m = re.sub(r"\b(cng|smart hybrid|hybrid|ags|amt|cvt|mt|at|ivt|dct|std|"
                r"magna|sportz|asta|era|executive|variants?|tour|plus|x)\b", " ", m)
     m = re.sub(r"[0-9].*$", "", m)      # drop engine/variant numbers and everything after
     m = re.sub(r"[^a-z ]", " ", m)
