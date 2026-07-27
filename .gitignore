@@ -17,3 +17,5 @@ pg-*.jpg
 
 # OS
 .DS_Store
+graphify-out/
+.pytest_cache/
