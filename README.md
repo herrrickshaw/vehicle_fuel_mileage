@@ -67,6 +67,10 @@ CNG 27.40 km/kg, +40.3% same-nameplate petrol→CNG uplift):
   reference-plant model — mandated CBO demand, 8-lever policy moat, three revenue legs, project
   IRR 20.6% / equity IRR 32% / DSCR 1.85×, and a ₹150 cr 10-plant platform ask anchored on
   cooperative-sugar-mill press-mud.
+- **Multi-feed distillery conversion pitch** (`docs/Distillery_MultiFeed_Pitch.pptx/.pdf`):
+  ₹50 cr converts a 100-KLPD molasses distillery to 330-day dual-feed — slab arbitrage (maize
+  ₹71.86 vs C-heavy ₹57.97), project IRR 38.4% / equity 81% on DFPD-subvented debt, with the
+  damaged-grain-slab stress (17%) as the honest floor; 5-mill ₹250 cr CSM programme ask.
 
 ## Headline findings (Delhi basis, July 2026)
 
