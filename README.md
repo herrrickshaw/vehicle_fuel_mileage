@@ -34,6 +34,25 @@ Everything is generated from two scripts: a Python model builder (Excel) and a N
 9. **ExchequerRevenue** — fuel excise+VAT + vehicle GST, additional earnings from growth, EV/CNG/ethanol erosion.
 10. **Checks** — 21 automated data-consistency checks (all must read PASS).
 
+### Companion study: The Volume Dividend (2026-07-28)
+
+`docs/Energy_Blend_Volume_Dividend.docx/.pdf` + `docs/Volume_Dividend_Slides.pptx` — an
+energy-density and fiscal follow-up built in the companion repo
+[`india-omc-fuel-fleet-model`](https://github.com/herrrickshaw/india-omc-fuel-fleet-model),
+with vehicle mileage anchored on **this repo's SIAM FE declarations** (petrol 16.67 kmpl,
+CNG 27.40 km/kg, +40.3% same-nameplate petrol→CNG uplift):
+
+- **The volume effect**: E20's −4% mileage pulls +2.16 bn extra litres through pumps for the same
+  km — ₹22,703 cr/yr of extra consumer spend at an unchanged pump price, collected via per-litre
+  levies (excise ₹4,303 cr, VAT ₹4,216 cr, dealer commission ₹886 cr, OMC margin ₹757 cr).
+- **Parity pricing**: honest cost-per-km needs E20 at ₹100.80/L (E30 ₹97.65). The dual-tax exemption
+  this repo's TaxStructure sheet documents (ethanol pays only 5% GST) already funds that discount
+  1.3–1.5× — it is currently retained in the price build-up, not rebated.
+- **The E27 grand bargain**: parity price ₹98.44 + a 5% state SGST on ethanol (₹4,787 cr/yr for
+  states) still fits inside the embedded headroom with ₹1.27/L to spare.
+- **CBG contrast**: sold per kg at CNG-parity energy — renewable MJ at ₹1.16 vs ethanol's ₹2.94
+  (2.5× cheaper), zero mileage loss, zero hidden levy.
+
 ## Headline findings (Delhi basis, July 2026)
 
 - **Running cost/km:** EV cheapest (₹1.41 hatchback, ₹0.35 scooter) < CNG (₹2.97) < diesel (₹4.33–5.01 cars) < E20 petrol (₹6.65–8.18). Ethanol penalty ≈ ₹4,000/yr per car.
