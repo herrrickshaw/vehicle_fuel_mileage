@@ -52,6 +52,13 @@ CNG 27.40 km/kg, +40.3% same-nameplate petrol→CNG uplift):
   states) still fits inside the embedded headroom with ₹1.27/L to spare.
 - **CBG contrast**: sold per kg at CNG-parity energy — renewable MJ at ₹1.16 vs ethanol's ₹2.94
   (2.5× cheaper), zero mileage loss, zero hidden levy.
+- **Supply check (CareEdge May-2026, DFPD register, NCDC coop scheme)**: the higher blends *cure*
+  the distillery overcapacity — E20 runs FY27 capacity at 59%, E27 at 76% (top of the consolidation
+  band) with zero new construction; the coop-mill scheme is 96.5% working capital (~9.7 cr L/yr of
+  actual ethanol capacity); feedstock (marginal maize), not steel, is the binding constraint.
+- **RON95 dividend**: ethanol's blending RON ~112 means E20 on an unchanged 91-RON blendstock is a
+  free RON95 fuel; compression-ratio headroom recovers +2.2% efficiency → net E20 mileage penalty
+  ≈ −1.8% on a RON95-calibrated engine — the Brazil E27 playbook, arriving with fleet turnover.
 
 ## Headline findings (Delhi basis, July 2026)
 
