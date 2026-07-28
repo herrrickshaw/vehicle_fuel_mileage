@@ -63,6 +63,10 @@ CNG 27.40 km/kg, +40.3% same-nameplate petrol→CNG uplift):
   register (SATAT/CBO offtake, capital schemes, DPI pipeline, FCO Schedule VIII fertiliser leg +
   MDA, priority-sector lending, GST/excise/carbon, IS 16087, state policies) — every leg of the
   CBG business de-risked on-budget, the structural opposite of ethanol's consumer-funded dividend.
+- **CBG investment pitch** (`docs/CBG_Investment_Pitch.pptx/.pdf`): 9-slide deck on a 12-TPD
+  reference-plant model — mandated CBO demand, 8-lever policy moat, three revenue legs, project
+  IRR 20.6% / equity IRR 32% / DSCR 1.85×, and a ₹150 cr 10-plant platform ask anchored on
+  cooperative-sugar-mill press-mud.
 
 ## Headline findings (Delhi basis, July 2026)
 
