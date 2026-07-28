@@ -71,6 +71,10 @@ CNG 27.40 km/kg, +40.3% same-nameplate petrol→CNG uplift):
   ₹50 cr converts a 100-KLPD molasses distillery to 330-day dual-feed — slab arbitrage (maize
   ₹71.86 vs C-heavy ₹57.97), project IRR 38.4% / equity 81% on DFPD-subvented debt, with the
   damaged-grain-slab stress (17%) as the honest floor; 5-mill ₹250 cr CSM programme ask.
+- **DME in LPG — the fourth quadrant** (paper §10 + slide 13, LERC basis): DME's −37%/kg dilution
+  on a *subsidised* per-kg fuel inverts the volume dividend — DME20 costs households +₹312/yr AND
+  adds ₹1,201 cr/yr of PMUY subsidy; methanol-route DME fails the ₹32.7/kg energy-parity ceiling,
+  so guardrails are parity cylinder pricing (₹761 vs ₹803) + domestic-carbon DME only.
 
 ## Headline findings (Delhi basis, July 2026)
 
