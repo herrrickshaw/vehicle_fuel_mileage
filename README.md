@@ -75,6 +75,10 @@ CNG 27.40 km/kg, +40.3% same-nameplate petrol→CNG uplift):
   on a *subsidised* per-kg fuel inverts the volume dividend — DME20 costs households +₹312/yr AND
   adds ₹1,201 cr/yr of PMUY subsidy; methanol-route DME fails the ₹32.7/kg energy-parity ceiling,
   so guardrails are parity cylinder pricing (₹761 vs ₹803) + domestic-carbon DME only.
+- **DME blending pitch** (`docs/DME_Blending_Pitch.pptx/.pdf`): the guardrails made investable —
+  100-TPD dehydration plant selling at energy parity into unsubsidised commercial LPG; IRR 26% /
+  equity 42% on domestic methanol, with the kg-parity "temptation margin" (₹34.7/kg) shown and
+  refused; gated on a ≤₹17/kg take-or-pay methanol contract.
 
 ## Headline findings (Delhi basis, July 2026)
 
