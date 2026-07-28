@@ -79,6 +79,10 @@ CNG 27.40 km/kg, +40.3% same-nameplate petrol→CNG uplift):
   100-TPD dehydration plant selling at energy parity into unsubsidised commercial LPG; IRR 26% /
   equity 42% on domestic methanol, with the kg-parity "temptation margin" (₹34.7/kg) shown and
   refused; gated on a ≤₹17/kg take-or-pay methanol contract.
+- **Bio-isobutanol pitch** (`docs/Isobutanol_Blending_Pitch.pptx/.pdf`): the molecule that halves
+  the mileage penalty — IB20 dilutes 3.5% vs E20's 6.9%, and yields +25% more jet fuel per tonne
+  via ATJ. Blocked by having no price slab and no BIS standard (at ethanol's per-litre slab the
+  margin is −₹9.58/L); with energy-basis pricing, blending-only IRR 13.8% → 33.9% at 30% SAF.
 
 ## Headline findings (Delhi basis, July 2026)
 
