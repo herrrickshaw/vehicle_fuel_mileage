@@ -59,6 +59,10 @@ CNG 27.40 km/kg, +40.3% same-nameplate petrol→CNG uplift):
 - **RON95 dividend**: ethanol's blending RON ~112 means E20 on an unchanged 91-RON blendstock is a
   free RON95 fuel; compression-ratio headroom recovers +2.2% efficiency → net E20 mileage penalty
   ≈ −1.8% on a RON95-calibrated engine — the Brazil E27 playbook, arriving with fleet turnover.
+- **Annex A — CBG incentive stack**: 19 instruments by lever from the 70-circular GOBARdhan
+  register (SATAT/CBO offtake, capital schemes, DPI pipeline, FCO Schedule VIII fertiliser leg +
+  MDA, priority-sector lending, GST/excise/carbon, IS 16087, state policies) — every leg of the
+  CBG business de-risked on-budget, the structural opposite of ethanol's consumer-funded dividend.
 
 ## Headline findings (Delhi basis, July 2026)
 
