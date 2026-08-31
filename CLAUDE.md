@@ -59,3 +59,12 @@ node scripts/build_report.js
 - Keep sheet names without awkward spaces; cross-sheet refs to names with spaces must be quoted.
 - Prefer Excel-2007-era functions (INDEX/MATCH/SUMPRODUCT/IFERROR); avoid XLOOKUP/FILTER/UNIQUE
   (LibreOffice recalc can't evaluate them from openpyxl-written files).
+
+## Cross-session project memory
+
+A Claude Code session rooted here has no persisted memory of its own. Decisions, hazards, and
+credential locations for the broader market-research platform (of which this cost model is one
+project) live under the `~` (home) session: `~/.claude/projects/-Users-umashankar/memory/`,
+indexed by `MEMORY.md` and mapped by the `reference_memory_map` memory. From here, reach it with
+`qmd search "<topic>"` (indexes that memory directory regardless of working directory) rather than
+assuming this session has its own history.
