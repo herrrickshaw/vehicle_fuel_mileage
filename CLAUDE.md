@@ -67,4 +67,7 @@ credential locations for the broader market-research platform (of which this cos
 project) live under the `~` (home) session: `~/.claude/projects/-Users-umashankar/memory/`,
 indexed by `MEMORY.md` and mapped by the `reference_memory_map` memory. From here, reach it with
 `qmd search "<topic>"` (indexes that memory directory regardless of working directory) rather than
-assuming this session has its own history.
+assuming this session has its own history. For fast orientation, a published snapshot of 128
+incident-sourced rules from across that memory is browsable at
+https://claude.ai/code/artifact/e29ceaeb-099e-4de7-ab43-dcd97a2d8f57 ("Ways of Working") — a
+starting point, not authoritative over the live memory files.
