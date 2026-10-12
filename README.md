@@ -1,5 +1,9 @@
 # Which Gives More Bang for Your Buck? — India Vehicle Fuel-Cost Analysis
 
+<!-- how-to-use-with-ai -->
+> **New here?** See [How to use this repo with AI (Claude, Gemini, ChatGPT)](HOW_TO_USE_WITH_AI.md) — clone it, paste it into an AI tool, and ask in plain English.
+
+
 A reproducible cost-of-ownership and fiscal analysis comparing **ethanol-blended petrol (E20), diesel, CNG and electric** vehicles in India (July 2026 basis), and the tax revenue they generate for the exchequer.
 
 Everything is generated from two scripts: a Python model builder (Excel) and a Node report builder (Word). No manual spreadsheet editing.
