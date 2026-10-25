@@ -643,7 +643,7 @@ exrow("Revenue foregone on ethanol",f"={EXC['p_L']}*{EXC['eth_sh']}*{EXC['eth_ga
 EXC['eth_forgo']=f"ExchequerRevenue!$B${er-1}"
 ex.cell(er,1,"Plus: every EV/CNG sale pays 5% GST (vs 18-40% ICE) and burns no taxed petrol/diesel — a growing structural drag on both streams above.").font=NOTE
 er+=2
-ex.cell(er,1,"Bottom line: vehicle + VKT growth adds ~Rs "+"{:,}".format(0)+" (see D) to the exchequer each year at constant rates; the EV/CNG/ethanol shift is the offsetting headwind (E). Fuel tax = outside GST (excise+VAT); vehicles & ethanol = inside GST.").font=Font(name=ARIAL,italic=True,size=9,color="595959")
+ex.cell(er,1,'="Bottom line: vehicle + VKT growth adds ~Rs "&TEXT('+EXC['add_total']+',"0.00")&" lakh cr (see D) to the exchequer each year at constant rates; the EV/CNG/ethanol shift is the offsetting headwind (E). Fuel tax = outside GST (excise+VAT); vehicles & ethanol = inside GST."').font=Font(name=ARIAL,italic=True,size=9,color="595959")
 for col,w in {"A":34,"B":16,"C":10,"D":40}.items(): ex.column_dimensions[col].width=w
 
 # ============ CHECKS ============
@@ -698,7 +698,7 @@ lines=[
  ("4. EthanolImpact: what ethanol blending costs a petrol owner.",""),
  ("5. TCO_Scenarios: fuel + maintenance + premium and payback across Low/Average/High usage.",""),
  ("6. TaxStructure: why petrol/diesel are taxed by BOTH centre and state, while ethanol carries only 5% GST (federal).",""),
- ("7. Checks: 13 automated consistency checks (should all read PASS).",""),
+ (f"7. Checks: {len(checks)} automated consistency checks (should all read PASS).",""),
  ("",""),
  ("COLOUR LEGEND","h"),
  ("Blue = editable input. Yellow = key lever. Green = pulled from another sheet. Black = calculated.",""),
