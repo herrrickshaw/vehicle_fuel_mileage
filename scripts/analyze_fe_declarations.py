@@ -202,6 +202,9 @@ def main():
     lines.append("|---|--:|--:|---|")
     lines.append(f"| Hatchback petrol (kmpl) | {CITED['hatchback petrol']} | "
                  f"{st.mean(hatch):.1f} | consistent |")
+    sedan_recomputed = f"{st.mean(sedan):.1f}" if sedan else "—"
+    lines.append(f"| Sedan / compact SUV petrol (kmpl) | {CITED['sedan petrol']} / {CITED['compact SUV petrol']} | "
+                 f"{sedan_recomputed} | band pools sedans and compact SUVs |")
     lines.append(f"| CNG car (km/kg) | {CITED['CNG car (km/kg)']} | {st.mean(cng_all):.1f} | consistent |")
     lines.append("")
     lines.append("The model then applies a further ~12-21% haircut to these certified figures to reach "

@@ -145,3 +145,16 @@ def test_base_model_key_pairs_previously_missed_trim_codes():
     for variant in ["Swift LXI", "Swift ZXI", "Swift ZXI+", "Swift ZDI",
                     "Swift VDI", "Swift ZXI CNG"]:
         assert afe.base_model_key(variant) == base == "swift"
+
+
+def test_main_cross_check_table_includes_sedan_band(run_main):
+    """Section 4 cross-checks the cited SIAM averages; sources.md cites sedan 18.4 and
+    compact SUV 14.8, and main() computes the sedan-band list, but the row was never
+    written. Fixture: Beta LXI 1300 kg petrol 16.0 -> 'Sedan / compact SUV' band mean 16.0."""
+    _, _, out_md = run_main
+    md = out_md.read_text()
+    sedan_rows = [ln for ln in md.splitlines() if ln.startswith("| Sedan / compact SUV petrol (kmpl)")]
+    assert len(sedan_rows) == 1, "cross-check table has no sedan / compact SUV row"
+    row = sedan_rows[0]
+    assert "18.4" in row and "14.8" in row  # both cited calibration values
+    assert "| 16.0 |" in row  # recomputed from the fixture's single sedan-band petrol row
