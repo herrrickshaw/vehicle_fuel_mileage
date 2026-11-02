@@ -10,10 +10,13 @@ Writes : data/fe_by_fuel_summary.csv     (one row per fuel type)
 Pure stdlib (csv + statistics) so it runs without pandas.
 Declared FE units: petrol/diesel/hybrid = kmpl, CNG = km/kg, electric = km/kWh-eq.
 """
+from __future__ import annotations
+
 import csv
 import re
 import statistics as st
 from pathlib import Path
+from typing import Dict, List, Optional, Tuple
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "data" / "siam_bsvi_fe_2020_4w.csv"
@@ -42,9 +45,10 @@ CITED = {
 }
 
 
-def load():
+def load(src: Optional[Path] = None) -> List[dict]:
+    """Read the extracted declarations CSV; numeric columns cast (FE in kmpl or km/kg)."""
     rows = []
-    for r in csv.DictReader(SRC.open()):
+    for r in csv.DictReader((src or SRC).open()):
         r["kerb_weight_kg"] = int(r["kerb_weight_kg"])
         r["engine_cc"] = int(r["engine_cc"]) if r["engine_cc"] else None
         r["declared_fe"] = float(r["declared_fe"])
@@ -53,7 +57,8 @@ def load():
     return rows
 
 
-def desc(vals):
+def desc(vals: List[float]) -> dict:
+    """Count/mean/median/min/max of a non-empty list of declared FE or CO2 values."""
     return {
         "n": len(vals),
         "mean": round(st.mean(vals), 2),
@@ -63,7 +68,7 @@ def desc(vals):
     }
 
 
-def base_model_key(model):
+def base_model_key(model: str) -> str:
     """Normalise a variant string to a coarse model key so petrol & CNG
     variants of the same nameplate match (drop trim/transmission/fuel tokens)."""
     m = model.lower()
@@ -79,41 +84,45 @@ def base_model_key(model):
     return " ".join(m.split()).strip()
 
 
-def main():
-    rows = load()
-
-    # ---- 1. by fuel type -------------------------------------------------
-    fuels = {}
+def summarize_by_fuel(rows: List[dict]) -> List[dict]:
+    """One summary row per fuel type, most common fuel first."""
+    fuels: Dict[str, List[dict]] = {}
     for r in rows:
         fuels.setdefault(r["fuel_type"], []).append(r)
-    fuel_summary = []
+    out = []
     for fuel, rs in sorted(fuels.items(), key=lambda kv: -len(kv[1])):
         fe = desc([r["declared_fe"] for r in rs])
         co2 = desc([r["declared_co2_gkm"] for r in rs])
-        fuel_summary.append({
+        out.append({
             "fuel_type": fuel, "n": fe["n"],
             "fe_mean": fe["mean"], "fe_median": fe["median"],
             "fe_min": fe["min"], "fe_max": fe["max"],
             "co2_mean_gkm": co2["mean"], "co2_median_gkm": co2["median"],
         })
-    with OUT_FUEL.open("w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=list(fuel_summary[0].keys()))
-        w.writeheader(); w.writerows(fuel_summary)
+    return out
 
-    # ---- 2. petrol & diesel by weight band -------------------------------
-    def band_of(kg):
-        for name, lo, hi in BANDS:
-            if lo <= kg < hi:
-                return name
-        return BANDS[-1][0]
 
-    band_tbl = {}   # (fuel, band) -> list of FE
+def band_of(kg: float) -> str:
+    """Segment label for a kerb weight in kg (falls back to the heaviest band)."""
+    for name, lo, hi in BANDS:
+        if lo <= kg < hi:
+            return name
+    return BANDS[-1][0]
+
+
+def fe_by_band(rows: List[dict]) -> Dict[Tuple[str, str], List[float]]:
+    """(fuel, band) -> declared FE list, for petrol (Gasoline) and diesel only."""
+    tbl: Dict[Tuple[str, str], List[float]] = {}
     for r in rows:
         if r["fuel_type"] in ("Gasoline", "Diesel"):
-            band_tbl.setdefault((r["fuel_type"], band_of(r["kerb_weight_kg"])), []).append(r["declared_fe"])
+            tbl.setdefault((r["fuel_type"], band_of(r["kerb_weight_kg"])), []).append(r["declared_fe"])
+    return tbl
 
-    # ---- 3. same-model petrol vs CNG pairs -------------------------------
-    petrol_by_key, cng_by_key = {}, {}
+
+def petrol_cng_pairs(rows: List[dict]) -> List[dict]:
+    """Same-nameplate petrol vs CNG distance-per-unit uplift, largest uplift first."""
+    petrol_by_key: Dict[str, List[dict]] = {}
+    cng_by_key: Dict[str, List[dict]] = {}
     for r in rows:
         key = base_model_key(r["model_variant"])
         if not key:
@@ -136,20 +145,28 @@ def main():
             "distance_uplift_pct": round((c / p - 1) * 100, 1),
         })
     pairs.sort(key=lambda d: -d["distance_uplift_pct"])
-    with OUT_PAIRS.open("w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=list(pairs[0].keys()))
-        w.writeheader(); w.writerows(pairs)
-    mean_uplift = round(st.mean(p["distance_uplift_pct"] for p in pairs), 1)
+    return pairs
 
-    # ---- 4. E20 penalty on the petrol fleet ------------------------------
-    petrol_fe = [r["declared_fe"] for r in rows if r["fuel_type"] == "Gasoline"]
+
+def e20_effective_fe(petrol_mean: float, drop: float) -> float:
+    """Petrol FE (kmpl) after an E20 mileage drop given as a fraction (0.04 = 4%)."""
+    return round(petrol_mean * (1 - drop), 2)
+
+
+def write_csv(path: Path, records: List[dict]) -> None:
+    """Write dict records to CSV with the first record's keys as header."""
+    with path.open("w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(records[0].keys()))
+        w.writeheader()
+        w.writerows(records)
+
+
+def render_markdown(rows: List[dict], fuel_summary: List[dict], band_tbl: Dict[Tuple[str, str], List[float]],
+                    pairs: List[dict], mean_uplift: float, petrol_fe: List[float]) -> str:
+    """Build the narrative markdown report from already-computed tables."""
     petrol_mean = st.mean(petrol_fe)
 
-    def eff(drop):
-        return round(petrol_mean * (1 - drop), 2)
-
-    # ---- write markdown --------------------------------------------------
-    def band_row(fuel, name):
+    def band_row(fuel: str, name: str) -> str:
         v = band_tbl.get((fuel, name))
         return f"{st.mean(v):.1f} (n={len(v)})" if v else "—"
 
@@ -177,7 +194,8 @@ def main():
     lines.append("| Segment (kerb-weight proxy) | Petrol kmpl | Diesel kmpl |")
     lines.append("|---|--:|--:|")
     for name, lo, hi in BANDS:
-        lines.append(f"| {name} ({lo}-{hi if hi < 10000 else '+'} kg) | {band_row('Gasoline', name)} | {band_row('Diesel', name)} |")
+        span = f"{lo}-{hi if hi < 10000 else '+'}"
+        lines.append(f"| {name} ({span} kg) | {band_row('Gasoline', name)} | {band_row('Diesel', name)} |")
     lines.append("")
 
     lines.append("## 3. Same-nameplate petrol → CNG uplift\n")
@@ -196,7 +214,6 @@ def main():
     lines.append("`data/sources.md` cites SIAM certified averages the model was calibrated to. "
                  "Recomputed from the raw declarations:\n")
     hatch = band_tbl.get(("Gasoline", "Hatchback"), [])
-    sedan = band_tbl.get(("Gasoline", "Sedan / compact SUV"), [])
     cng_all = [r["declared_fe"] for r in rows if r["fuel_type"] == "CNG"]
     lines.append("| Metric | Cited in sources.md | Recomputed from raw | Note |")
     lines.append("|---|--:|--:|---|")
@@ -214,7 +231,7 @@ def main():
     lines.append("| E20 drop | Effective FE (kmpl) | FE lost |")
     lines.append("|---|--:|--:|")
     for lbl, d in [("2% (SIAM low)", E20_LOW), ("4% (central)", E20_MID), ("6% (ARAI high)", E20_HIGH)]:
-        lines.append(f"| {lbl} | {eff(d)} | −{petrol_mean*d:.2f} |")
+        lines.append(f"| {lbl} | {e20_effective_fe(petrol_mean, d)} | −{petrol_mean*d:.2f} |")
     lines.append("")
     lines.append("Because petrol is the single largest slice of both new sales and the on-road parc, "
                  "this small per-vehicle haircut is what aggregates into the national ethanol-penalty "
@@ -223,7 +240,21 @@ def main():
     lines.append("---\n*Generated by `scripts/analyze_fe_declarations.py`. Certified type-approval "
                  "figures, not real-world mileage or financial advice.*\n")
 
-    OUT_MD.write_text("\n".join(lines))
+    return "\n".join(lines)
+
+
+def main() -> None:
+    """Load declarations, write the two CSVs and the markdown report, print a summary."""
+    rows = load()
+    fuel_summary = summarize_by_fuel(rows)
+    write_csv(OUT_FUEL, fuel_summary)
+    band_tbl = fe_by_band(rows)
+    pairs = petrol_cng_pairs(rows)
+    write_csv(OUT_PAIRS, pairs)
+    mean_uplift = round(st.mean(p["distance_uplift_pct"] for p in pairs), 1)
+    petrol_fe = [r["declared_fe"] for r in rows if r["fuel_type"] == "Gasoline"]
+    petrol_mean = st.mean(petrol_fe)
+    OUT_MD.write_text(render_markdown(rows, fuel_summary, band_tbl, pairs, mean_uplift, petrol_fe))
 
     # ---- console summary -------------------------------------------------
     print("Fuel-type summary:")
@@ -231,7 +262,8 @@ def main():
         print(f"  {s['fuel_type']:16s} n={s['n']:3d}  mean FE {s['fe_mean']:6.2f}  "
               f"median {s['fe_median']:6.2f}  mean CO2 {s['co2_mean_gkm']:6.1f}")
     print(f"\nSame-model petrol->CNG mean distance uplift: +{mean_uplift}%  ({len(pairs)} nameplates)")
-    print(f"Mean petrol declared FE {petrol_mean:.2f} kmpl -> E20@4% {eff(E20_MID)} kmpl (−{petrol_mean*E20_MID:.2f})")
+    print(f"Mean petrol declared FE {petrol_mean:.2f} kmpl -> "
+          f"E20@4% {e20_effective_fe(petrol_mean, E20_MID)} kmpl (−{petrol_mean*E20_MID:.2f})")
     print(f"\nWrote:\n  {OUT_FUEL.relative_to(ROOT)}\n  {OUT_PAIRS.relative_to(ROOT)}\n  {OUT_MD.relative_to(ROOT)}")
 
 
