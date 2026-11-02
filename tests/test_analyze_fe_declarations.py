@@ -145,3 +145,23 @@ def test_base_model_key_pairs_previously_missed_trim_codes():
     for variant in ["Swift LXI", "Swift ZXI", "Swift ZXI+", "Swift ZDI",
                     "Swift VDI", "Swift ZXI CNG"]:
         assert afe.base_model_key(variant) == base == "swift"
+
+
+def test_pure_helpers_band_and_e20():
+    assert afe.band_of(500) == "Micro / entry hatchback"
+    assert afe.band_of(900) == "Hatchback"
+    assert afe.band_of(99_999) == afe.BANDS[-1][0]
+    assert afe.e20_effective_fe(20.0, 0.04) == 19.2
+
+
+def test_summarize_and_pairs_pure():
+    rows = [
+        {"model_variant": "Alto LXI", "fuel_type": "Gasoline", "declared_fe": 20.0,
+         "declared_co2_gkm": 100.0, "kerb_weight_kg": 800},
+        {"model_variant": "Alto LXI CNG", "fuel_type": "CNG", "declared_fe": 30.0,
+         "declared_co2_gkm": 80.0, "kerb_weight_kg": 800},
+    ]
+    summary = afe.summarize_by_fuel(rows)
+    assert {s["fuel_type"] for s in summary} == {"Gasoline", "CNG"}
+    pairs = afe.petrol_cng_pairs(rows)
+    assert len(pairs) == 1 and pairs[0]["distance_uplift_pct"] == 50.0

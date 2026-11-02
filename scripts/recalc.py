@@ -13,17 +13,23 @@ Excel / LibreOffice / Google Sheets recalculates it automatically.
 Usage:  python scripts/recalc.py outputs/model.xlsx
 Exit:   0 if recalculated (even with formula errors), non-zero if it could not run.
 """
+from __future__ import annotations
+
 import json
 import os
 import shutil
 import subprocess
 import sys
 import tempfile
+from typing import Dict, List, Optional
+
+import openpyxl
 
 ERROR_TOKENS = ("#DIV/0!", "#N/A", "#NAME?", "#NULL!", "#NUM!", "#REF!", "#VALUE!", "#ERROR!")
 
 
-def find_soffice():
+def find_soffice() -> Optional[str]:
+    """Path of the LibreOffice binary on PATH, or None."""
     for name in ("soffice", "libreoffice"):
         path = shutil.which(name)
         if path:
@@ -31,7 +37,21 @@ def find_soffice():
     return None
 
 
-def recalc(path):
+def scan_errors(path: str) -> Dict[str, List[str]]:
+    """Map each Excel error token found in cached values to its cell addresses."""
+    wb = openpyxl.load_workbook(path, data_only=True)
+    errors: Dict[str, List[str]] = {}
+    for ws in wb.worksheets:
+        for row in ws.iter_rows():
+            for cell in row:
+                v = cell.value
+                if isinstance(v, str) and v in ERROR_TOKENS:
+                    errors.setdefault(v, []).append(f"{ws.title}!{cell.coordinate}")
+    return errors
+
+
+def recalc(path: str) -> int:
+    """Recalculate the workbook in place via headless LibreOffice and print a JSON error report."""
     soffice = find_soffice()
     if not soffice:
         print(json.dumps({"error": "LibreOffice (soffice) not found on PATH"}))
@@ -58,17 +78,8 @@ def recalc(path):
         shutil.move(produced, path)
 
     # Scan the recalculated file for error strings.
-    import openpyxl
-    wb = openpyxl.load_workbook(path, data_only=True)
-    errors = {}
-    total = 0
-    for ws in wb.worksheets:
-        for row in ws.iter_rows():
-            for cell in row:
-                v = cell.value
-                if isinstance(v, str) and v in ERROR_TOKENS:
-                    total += 1
-                    errors.setdefault(v, []).append(f"{ws.title}!{cell.coordinate}")
+    errors = scan_errors(path)
+    total = sum(len(v) for v in errors.values())
     print(json.dumps({
         "status": "errors_found" if total else "success",
         "total_errors": total,

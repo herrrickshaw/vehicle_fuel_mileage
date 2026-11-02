@@ -1,0 +1,21 @@
+[project]
+name = "vehicle-fuel-mileage"
+version = "1.0.0"
+description = "India vehicle fuel-cost (E20/diesel/CNG/EV) cost model and SIAM fuel-efficiency analysis"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+# build_model.py is a dense, formula-oriented top-level script; restyling it is
+# deliberately out of scope for this behaviour-preserving pass (see PR Phase 2).
+"scripts/build_model.py" = ["E", "W", "I", "F401", "F841"]
+"tests/*" = ["I"]
