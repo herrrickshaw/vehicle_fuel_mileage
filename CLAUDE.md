@@ -19,6 +19,12 @@ revenue they generate. Two generator scripts produce two artifacts; **never hand
 - `scripts/build_report.js` — builds the Word report with `docx` (npm). Numbers in the report are
   transcribed from the recalculated model; keep them in sync when the model changes.
 
+## Tests and lint
+
+`pytest -q` and `ruff check .` (config in `pyproject.toml`); CI runs both. `analyze_fe_declarations.py`
+and `extract_fe_pdf.py` expose pure helpers (`summarize_by_fuel`, `petrol_cng_pairs`, `parse_line`, ...) that
+the tests exercise; `main()` functions only do I/O.
+
 ## Golden rules (learned the hard way)
 
 1. **Formulas, not hardcoded numbers.** `sheet['B10'] = '=SUM(...)'`, never the Python total.
