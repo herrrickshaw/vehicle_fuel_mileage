@@ -12,10 +12,14 @@ so we anchor a regex on that tail and treat everything before it as
 prefix list. Manufacturer/model split is best-effort; the fuel-type analysis
 does not depend on it.
 """
+from __future__ import annotations
+
 import csv
 import re
 import sys
+from collections import Counter
 from pathlib import Path
+from typing import List, Optional, Tuple
 
 import pdfplumber
 
@@ -48,11 +52,13 @@ ROW_RE = re.compile(
 )
 
 
-def num(s):
+def num(s: str) -> str:
+    """Strip thousands separators and whitespace from a numeric string."""
     return s.replace(",", "").strip()
 
 
-def split_oem(name):
+def split_oem(name: str) -> Tuple[str, str]:
+    """Split "<OEM> <model>" into (manufacturer, model); best-effort via the OEMS prefix list."""
     for oem in OEMS:
         if name.startswith(oem):
             model = name[len(oem):].strip()
@@ -63,41 +69,48 @@ def split_oem(name):
     return " ".join(toks[:2]), " ".join(toks[2:])
 
 
-def main():
+def parse_line(line: str) -> Optional[dict]:
+    """Parse one PDF text line into a declaration row dict, or None if it is not a data row."""
+    # Strip thousands separators so kerb/cc parse cleanly. The PDF
+    # renders them irregularly ("1 ,000", "1,000", "1, 000"), so
+    # collapse digit + optional-space + comma + optional-space + 3
+    # digits into one integer. FE/CO2 use decimal points, not commas.
+    clean = re.sub(r"(\d)\s*,\s*(\d{3})", r"\1\2", line.strip())
+    m = ROW_RE.match(clean)
+    if not m:
+        return None
+    oem, model = split_oem(m["name"].strip())
+    return {
+        "sno": int(m["sno"]),
+        "manufacturer": oem,
+        "model_variant": model,
+        "kerb_weight_kg": int(num(m["kerb"])),
+        "engine_cc": (None if m["cc"] == "-" else int(num(m["cc"]))),
+        "emission_stage": "BS-VI",
+        "fuel_type": m["fuel"],
+        "declared_fe": float(m["fe"]),   # kmpl (petrol/diesel), km/kg (CNG), km/kWh-eq (electric)
+        "declared_co2_gkm": float(m["co2"]),
+    }
+
+
+def main() -> None:
     if not PDF.exists():
         sys.exit(f"Source PDF not found: {PDF}")
 
-    rows = []
+    rows: List[dict] = []
     seen_sno = set()
     with pdfplumber.open(PDF) as pdf:
         for page in pdf.pages:
             text = page.extract_text() or ""
             for line in text.splitlines():
-                # Strip thousands separators so kerb/cc parse cleanly. The PDF
-                # renders them irregularly ("1 ,000", "1,000", "1, 000"), so
-                # collapse digit + optional-space + comma + optional-space + 3
-                # digits into one integer. FE/CO2 use decimal points, not commas.
-                clean = re.sub(r"(\d)\s*,\s*(\d{3})", r"\1\2", line.strip())
-                m = ROW_RE.match(clean)
-                if not m:
+                row = parse_line(line)
+                if row is None:
                     continue
-                sno = int(m["sno"])
                 # The header repeats "S.no." etc. per page; ROW_RE won't match those.
-                if sno in seen_sno:
+                if row["sno"] in seen_sno:
                     continue
-                seen_sno.add(sno)
-                oem, model = split_oem(m["name"].strip())
-                rows.append({
-                    "sno": sno,
-                    "manufacturer": oem,
-                    "model_variant": model,
-                    "kerb_weight_kg": int(num(m["kerb"])),
-                    "engine_cc": (None if m["cc"] == "-" else int(num(m["cc"]))),
-                    "emission_stage": "BS-VI",
-                    "fuel_type": m["fuel"],
-                    "declared_fe": float(m["fe"]),   # kmpl (petrol/diesel), km/kg (CNG), km/kWh-eq (electric)
-                    "declared_co2_gkm": float(m["co2"]),
-                })
+                seen_sno.add(row["sno"])
+                rows.append(row)
 
     rows.sort(key=lambda r: r["sno"])
     with OUT.open("w", newline="") as f:
@@ -106,7 +119,6 @@ def main():
         w.writerows(rows)
 
     # Sanity report to stderr.
-    from collections import Counter
     by_fuel = Counter(r["fuel_type"] for r in rows)
     print(f"Extracted {len(rows)} rows -> {OUT.relative_to(ROOT)}", file=sys.stderr)
     print("By fuel:", dict(by_fuel), file=sys.stderr)
