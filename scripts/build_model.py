@@ -659,7 +659,7 @@ checks=[
  ("Blended electricity between home and public",f"=IF(AND({A['elec_blend']}>=MIN({A['elec_home']},{A['elec_public']}),{A['elec_blend']}<=MAX({A['elec_home']},{A['elec_public']})),\"PASS\",\"FAIL\")"),
  ("Home charging share 0-100%",f"=IF(AND({A['home_share']}>=0,{A['home_share']}<=1),\"PASS\",\"FAIL\")"),
  ("E20 drop >= E10 drop",f"=IF({A['e20_drop']}>={A['e10_drop']},\"PASS\",\"FAIL\")"),
- ("All cost/km positive",f"=IF(MIN('CostPerKm'!G5:G100)>0,\"PASS\",\"FAIL\")"),
+ ("All cost/km positive","=IF(MIN('CostPerKm'!G5:G100)>0,\"PASS\",\"FAIL\")"),
  ("High > Average > Low usage",f"=IF(AND({A['km_high']}>{A['km_avg']},{A['km_avg']}>{A['km_low']}),\"PASS\",\"FAIL\")"),
  ("Annual total = fuel + maint (TCO row 5)","=IF(ABS('TCO_Scenarios'!H5-('TCO_Scenarios'!F5+'TCO_Scenarios'!G5))<0.01,\"PASS\",\"FAIL\")"),
  ("No negative payback",f"=IF(SUMPRODUCT(--ISNUMBER('TCO_Scenarios'!L5:L{tco_last}),--('TCO_Scenarios'!L5:L{tco_last}<0))=0,\"PASS\",\"FAIL\")"),
