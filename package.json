@@ -7,6 +7,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "docx": "^8.5.0"
+    "docx": "^9.15.4"
   }
 }
